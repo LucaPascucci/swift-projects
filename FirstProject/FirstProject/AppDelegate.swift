@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  FirstProject
 //
-//  Created by Filippo Nicolini on 31/10/14.
-//  Copyright (c) 2014 Filippo Nicolini. All rights reserved.
+//  Created by Filippo Nicolini and Luca Pascucci on 31/10/14.
+//  Copyright (c) 2014 Filippo Nicolini and Luca Pascucci. All rights reserved.
 //
 
 import UIKit
