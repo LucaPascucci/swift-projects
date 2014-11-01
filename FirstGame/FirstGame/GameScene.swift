@@ -10,7 +10,13 @@ import SpriteKit
 
 class GameScene: SKScene {
     
-    var ball:Ball_Bobbing!
+    var ball_Pulsing:Ball_Pulsing!
+    var angle = 0.0
+    var centreScale = 1.0
+    var pRange = 0.5
+    var pSpeed = 0.05
+    
+    var ball_Bobbing:Ball_Bobbing!
     var xangle = 0.0
     var yangle = 0.0
     var centerY = 0.0
@@ -19,9 +25,13 @@ class GameScene: SKScene {
     var yspped = 0.2
     
     override func didMoveToView(view: SKView) {
+       
         /* Setup your scene here */
-        ball = Ball_Bobbing(size: self.size)
-        self.addChild(ball.node)
+        ball_Bobbing = Ball_Bobbing(size: self.size)
+        self.addChild(ball_Bobbing.node)
+        
+        ball_Pulsing = Ball_Pulsing(size: CGSizeMake(100.0,100.0),color: SKColor.purpleColor())
+        self.addChild(ball_Pulsing.node)
         
     }
     
@@ -32,9 +42,14 @@ class GameScene: SKScene {
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
-        ball.node.position.y = CGFloat(centerY + sin(yangle) * range)
-        ball.node.position.x = CGFloat(centerY + sin(xangle) * range)
+        ball_Bobbing.node.position.y = CGFloat(centerY + sin(yangle) * range)
+        ball_Bobbing.node.position.x = CGFloat(centerY + sin(xangle) * range)
         xangle += xspeed
         yangle += yspped
+        
+        ball_Pulsing.node.setScale(CGFloat(centreScale + sin(angle) * pRange))
+        angle += pSpeed
+        
+        
     }
 }

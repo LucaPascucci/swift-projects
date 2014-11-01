@@ -29,8 +29,9 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
+            scene.anchorPoint = CGPointMake(0.5, 0.5)
             // Configure the view.
             let skView = self.view as SKView
             skView.showsFPS = true
