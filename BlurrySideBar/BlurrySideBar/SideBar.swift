@@ -21,6 +21,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate{
     let sideBarContainerView: UIView = UIView()
     let sideBarTableViewController:SideBarTableViewController = SideBarTableViewController()
     let originalView:UIView!
+    
     var animator:UIDynamicAnimator!
     var delegate:SideBarDelegate?
     var isSideBarOpen:Bool = false
@@ -63,6 +64,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate{
         sideBarTableViewController.tableView.frame = sideBarContainerView.bounds
         sideBarTableViewController.tableView.clipsToBounds = false
         sideBarTableViewController.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        sideBarTableViewController.tableView.backgroundColor = UIColor.clearColor()
         sideBarTableViewController.tableView.scrollsToTop = false
         sideBarTableViewController.tableView.contentInset = UIEdgeInsetsMake(sideBarTabelViewTopInsert, 0, 0, 0)
         

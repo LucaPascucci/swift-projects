@@ -8,15 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController , SideBarDelegate{
 
-    @IBOutlet var imageView: UIImageView!
     
+    @IBOutlet var imageView: UIImageView!
     var sideBar:SideBar = SideBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = UIImage(named: "image2")
+        imageView.image = UIImage(named: "Starry-Norway")
         sideBar = SideBar(sourceView: self.view, menuItems: ["first item", "second item", "funny item", "another item"])
         sideBar.delegate = self
     }
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
             imageView.image = nil
         } else if index == 1{
             imageView.backgroundColor = UIColor.clearColor()
-            imageView.image = UIImage(named: "image2")
+            imageView.image = UIImage(named: "Starry-Norway")
         }
     }
 }
