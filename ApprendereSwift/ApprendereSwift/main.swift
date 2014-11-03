@@ -84,7 +84,7 @@ while n < 100 {
 var m = 2
 do {
     m = m * 2
-}while m < 100
+} while m < 100
 
 // variabile opzionale (può contenere anche il valore nil = null0)
 var optionalString: String? = "Hello"
@@ -126,9 +126,20 @@ for var i = 0; i < 4; i++ {
     secondForLoop += i
 }
 
-var day = NSDate()
+//metodo per prendere la data odierna
+var date = NSDate()
+let formatter = NSDateFormatter()
+formatter.dateStyle = .FullStyle
 
-println(greet("Luca and Filippo", "Lunedì"))
+println(greet("Luca and Filippo", "\(formatter.stringFromDate(date))"))
+
+let statistics = calculateStatistic([5,3,100,3,9])
+println(statistics.sum)
+println(statistics.0)
+
+
+println(sumOf())
+println(sumOf(42,597,12))
 
 let test = Square(sideLenght: 5.2, name: "My Square")
 println("A square with \(test.area()) of area")
