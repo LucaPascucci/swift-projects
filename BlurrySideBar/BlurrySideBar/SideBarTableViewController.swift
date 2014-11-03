@@ -17,11 +17,12 @@ class SideBarTableViewController: UITableViewController {
     var delegate:SideBarTableViewControllerDelegate?
     var tableData:Array<String> = []
     
-    
+    //Sezioni verticali
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
 
+    //Sezioni orizzontali
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return tableData.count

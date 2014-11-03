@@ -10,15 +10,17 @@ import UIKit
 
 class ViewController: UIViewController , SideBarDelegate{
 
-    
     @IBOutlet var imageView: UIImageView!
     var sideBar:SideBar = SideBar()
+    var index: NSIndexPath = NSIndexPath(index: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = UIImage(named: "Starry-Norway")
-        sideBar = SideBar(sourceView: self.view, menuItems: ["first item", "second item", "funny item", "another item"])
+        sideBar = SideBar(sourceView: self.view, menuItems: ["first item", "second item"])
         sideBar.delegate = self
+        //sideBar.sideBarControlDidSelectRow(index)
+        //sideBar.delegate?.sideBarDidSelectButtonAtIndex(0)
     }
 
     override func didReceiveMemoryWarning() {
