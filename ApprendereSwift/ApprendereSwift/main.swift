@@ -59,6 +59,76 @@ for score in individualScores {
     }
 }
 
+//Ciclo for con dizionario
+let interestingNumbers = [
+    "Prime": [2,3,5,7,11,13],
+    "Fibonacci": [1,1,2,3,5,8],
+    "Square": [1,4,9,16,25]
+]
+var largest = 0
+for (kind, numbers) in interestingNumbers {
+    for number in numbers {
+        if number > largest {
+            largest = number
+        }
+    }
+}
+println(largest)
+
+//while e do_while
+var n = 2
+while n < 100 {
+    n = n * 2
+}
+
+var m = 2
+do {
+    m = m * 2
+}while m < 100
+
+// variabile opzionale (può contenere anche il valore nil = null0)
+var optionalString: String? = "Hello"
+optionalString = nil
+
+var optionalName: String? = "John Appleseed"
+var greeting = "Hello!"
+if let name = optionalName {
+    greeting = "Hello, \(name)"
+}
+println(greeting) //stampa interessante!
+
+//Switch_case
+let vegetable = "red pepper"
+switch vegetable {
+    case "celery":
+        let vegetableComment = "Add some raisins and make ants on a log."
+        println(vegetableComment)
+    case "cucumber", "watercress":
+        let vegetableComment = "Add some raisins and make ants on a log."
+        println(vegetableComment)
+    //let assegna il valore che matcha ad x
+    case let x where x.hasSuffix("pepper"):
+        let vegetableComment = "Is it a spicy \(x)?"
+        println(vegetableComment)
+    default:
+        let vegetableComment = "Everything tastes good in soup."
+        println(vegetableComment)
+}
+
+//loop
+var firstForLoop = 0
+for i in 0..<4 {
+    firstForLoop += i
+}
+
+var secondForLoop = 0
+for var i = 0; i < 4; i++ {
+    secondForLoop += i
+}
+
+var day = NSDate()
+
+println(greet("Luca and Filippo", "Lunedì"))
 
 let test = Square(sideLenght: 5.2, name: "My Square")
 println("A square with \(test.area()) of area")

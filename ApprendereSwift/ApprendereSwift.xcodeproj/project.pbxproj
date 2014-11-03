@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		817B2D051A082C630056B6F6 /* Funzioni.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817B2D041A082C630056B6F6 /* Funzioni.swift */; };
 		88941E821A08173600B1C274 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88941E811A08173600B1C274 /* main.swift */; };
 		88941E891A08175900B1C274 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88941E881A08175900B1C274 /* Square.swift */; };
 		88941E8B1A08178500B1C274 /* NamedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88941E8A1A08178500B1C274 /* NamedShape.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		817B2D041A082C630056B6F6 /* Funzioni.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Funzioni.swift; sourceTree = "<group>"; };
 		88941E7E1A08173600B1C274 /* ApprendereSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ApprendereSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		88941E811A08173600B1C274 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		88941E881A08175900B1C274 /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				88941E811A08173600B1C274 /* main.swift */,
 				88941E881A08175900B1C274 /* Square.swift */,
 				88941E8A1A08178500B1C274 /* NamedShape.swift */,
+				817B2D041A082C630056B6F6 /* Funzioni.swift */,
 			);
 			path = ApprendereSwift;
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 				88941E8B1A08178500B1C274 /* NamedShape.swift in Sources */,
 				88941E891A08175900B1C274 /* Square.swift in Sources */,
 				88941E821A08173600B1C274 /* main.swift in Sources */,
+				817B2D051A082C630056B6F6 /* Funzioni.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +245,7 @@
 				88941E871A08173600B1C274 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
