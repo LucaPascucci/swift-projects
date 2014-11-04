@@ -34,10 +34,13 @@ let fruitSummary = "I have \(apples + oranges) pieces of friut."
 // Dizionari
 let emptyDictionary = [String : Float]()
 var occupations = [
-    "Luca": "Captain",
+    "Luca": 20,
     "Filippo": "Developer",
 ]
 occupations["Jayne"] = "Public Relations"
+println(occupations["Luca"]) //capire perchè stampa: Optional("Public Relations")
+let prova = occupations["Luca"]
+println(prova)
 // Svuotare dizionario
 occupations = [:]
 
@@ -180,3 +183,18 @@ var triangle = EquilateralTriangle(sideLenght: 3.1, name: "A triangle")
 println(triangle.perimeter)
 triangle.perimeter = 9.9
 println(triangle.sideLenght)
+
+var triangleAndSquare = ​TriangleAndSquare​(size: 10, name: "Test")
+println("\(triangleAndSquare.triangle.sideLenght) descrizione: \(triangleAndSquare.triangle.name)")
+println("\(triangleAndSquare.square.sideLenght) descrizione: \(triangleAndSquare.square.name)")
+triangleAndSquare.square = Square(sideLenght: 50, name: "Test2")
+println("\(triangleAndSquare.triangle.sideLenght) descrizione: \(triangleAndSquare.triangle.name)")
+println("\(triangleAndSquare.square.sideLenght) descrizione: \(triangleAndSquare.square.name)")
+
+var counter = Counter()
+counter.incrementBy(5, numberOfTimes: 4)
+println(counter.count)
+
+let optionalSquare: Square? = Square(sideLenght: 5.5, name: "OptionalSquare")
+let sideLenght = optionalSquare?.sideLenght
+println(sideLenght)
