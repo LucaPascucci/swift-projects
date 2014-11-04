@@ -73,7 +73,7 @@ for (kind, numbers) in interestingNumbers {
         }
     }
 }
-println(largest)
+println("Il valore maggiore è: \(largest)")
 
 //while e do_while
 var n = 2
@@ -135,12 +135,48 @@ println(greet("Luca and Filippo", "\(formatter.stringFromDate(date))"))
 
 let statistics = calculateStatistic([5,3,100,3,9])
 println(statistics.sum)
-println(statistics.0)
-
+println(statistics.0) //accesso al "vettore" dato come risultato
 
 println(sumOf())
 println(sumOf(42,597,12))
 
+//notare bene
+var increment = makeIncrement()
+println("increment = \(increment)") // stampa interessante!!
+println("increment = \(increment(9))") // stampa interessante!!
+
+//Funzione con input un'altra funzione
+var numbers = [20,19,7,12]
+println(hasAnyMatches(numbers,lessThanTen))
+
+//Funzione innsetata nella variabile
+numbers.map({
+    (number: Int) -> Int in
+    let result = 3 * number
+    return result
+})
+let mappedNumbers = numbers.map({ number in 3 * number})
+for item in mappedNumbers {
+    print("\(item), ")
+}
+println("\nSize of array mappedNumbers: \(mappedNumbers.count)")
+
+let sortedNumbers = sorted(numbers) {$0 > $1}
+print("sortedNumbers: ")
+for item in sortedNumbers {
+    print("\(item), ")
+}
+println()
+
+var shape = Shape()
+shape.numberOfSides = 7
+println(shape.simpleDescription())
+
 let test = Square(sideLenght: 5.2, name: "My Square")
 println("A square with \(test.area()) of area")
 println(test.simpleDescription())
+
+var triangle = EquilateralTriangle(sideLenght: 3.1, name: "A triangle")
+println(triangle.perimeter)
+triangle.perimeter = 9.9
+println(triangle.sideLenght)
