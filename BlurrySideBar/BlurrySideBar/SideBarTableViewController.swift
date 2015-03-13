@@ -41,7 +41,7 @@ class SideBarTableViewController: UITableViewController {
             cell!.selectedBackgroundView = selectedView
         }
         
-        cell!.textLabel.text = tableData[indexPath.row]
+        cell.textLabel.text = tableData[indexPath.row]
 
         return cell!
     }

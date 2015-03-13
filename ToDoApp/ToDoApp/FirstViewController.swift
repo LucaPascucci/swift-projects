@@ -52,7 +52,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
      
 
         
-        cell.textLabel.text = taskMgr.tasks[indexPath.row].name
+        cell.textLabel?.text = taskMgr.tasks[indexPath.row].name
         cell.detailTextLabel?.text = taskMgr.tasks[indexPath.row].desc
         
         return cell
